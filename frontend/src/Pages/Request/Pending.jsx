@@ -1,59 +1,41 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Button } from 'primereact/button';
 
 function Pending() {
-  const [AdminIDs, setIDs] = useState([]);
-
-  const fetchData2 = async () => {
-    try {
-      const result = await axios("http://127.0.0.1:8000/getAdmin");
-      console.log(result.data.map(res => res.ID));
-     setIDs(result.data.map(res => res.ID));
-    } catch (err) {
-      console.log("Error with axios")
-    }
-   }
-  
-  
-  useEffect(() => {
-    fetchData2();
-  },[]);
-
-
+  const [AdminIDs, setAdminIDs] = useState([]);
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    fetchData();
+    // Simulating fetching admin IDs
+    const fetchAdminIDs = () => {
+      const result = [{ ID: 1 }, { ID: 2 }, { ID: 3 }];
+      setAdminIDs(result.map(res => res.ID));
+    };
+
+    fetchAdminIDs();
   }, []);
 
-  const fetchData = async () => {
-    try {
-      const result = await axios("http://127.0.0.1:8000/forRequest");
-      setTransactions(result.data);
-    } catch (err) {
-      console.log("Error with axios", err);
-    }
+  useEffect(() => {
+    // Simulating fetching transaction data
+    const fetchTransactions = () => {
+      const result = [
+        { TransactionID: 1, Deadline: '2024-05-14', Reason: 'Payment' },
+        { TransactionID: 2, Deadline: '2024-05-15', Reason: 'Refund' },
+        { TransactionID: 3, Deadline: '2024-05-16', Reason: 'Chargeback' }
+      ];
+      setTransactions(result);
+    };
+
+    fetchTransactions();
+  }, []);
+
+  const handleAccept = (transactionId) => {
+    // Update the transactions state to remove the accepted transaction
+    setTransactions(prevTransactions => prevTransactions.filter(transaction => transaction.TransactionID !== transactionId));
   };
 
-  const handleAccept = async (transactionId) => {
-    try {
-      await axios.put(`http://localhost:3206/updateTransaction/${transactionId}`, { Action: "Accepted" });
-      // After accepting, you might want to update the UI accordingly
-      fetchData();
-    } catch (err) {
-      console.log("Error accepting transaction", err);
-    }
-  };
-
-  const handleDecline = async (transactionId) => {
-    try {
-      await axios.put(`http://localhost:3206/updateTransaction/${transactionId}`, { Action: "Declined" });
-      // After declining, you might want to update the UI accordingly
-      fetchData();
-    } catch (err) {
-      console.log("Error declining transaction", err);
-    }
+  const handleDecline = (transactionId) => {
+    // Update the transactions state to remove the declined transaction
+    setTransactions(prevTransactions => prevTransactions.filter(transaction => transaction.TransactionID !== transactionId));
   };
 
   return (
@@ -71,24 +53,17 @@ function Pending() {
               </tr>
             </thead>
             <tbody>
-            {
-                    transactions.map((transaction, i) => {
-                      return (
-                        <tr key={i}>
-                          <td className='itemid'>{transaction.TransactionID}</td>
-                          <td className='itemid'>{transaction.Deadline}</td>
-                          <td className='itemid'>{transaction.Reason}</td>
-                          <td className='itemid'>
-                    
-                        <button id='bgbtn' className='btnaccept' onClick={() => handleAccept(transaction.TransactionID)}>Accept</button>
-                        <button id='bgbtn' className='btndecline' onClick={() => handleDecline(transaction.TransactionID)}>Decline</button>
-                    
-                    
+              {transactions.map((transaction, i) => (
+                <tr key={i}>
+                  <td className='itemid'>{transaction.TransactionID}</td>
+                  <td className='itemid'>{transaction.Deadline}</td>
+                  <td className='itemid'>{transaction.Reason}</td>
+                  <td className='itemid'>
+                    <button id='bgbtn' className='btnaccept' onClick={() => handleAccept(transaction.TransactionID)}>Accept</button>
+                    <button id='bgbtn' className='btndecline' onClick={() => handleDecline(transaction.TransactionID)}>Decline</button>
                   </td>
-                        </tr>
-                      )
-                    })
-                  }
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
