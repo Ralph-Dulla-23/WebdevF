@@ -1,0 +1,16 @@
+[
+    {"name": "Laptop", "code": "A1", "status": "Available", "itemId": "123"},
+    {"name": "Wire", "code": "A2", "status": "Available", "itemId": "124"},
+    {"name": "HDMI", "code": "A3", "status": "Available", "itemId": "125"},
+    {"name": "USB", "code": "A4", "status": "Available", "itemId": "126"},
+    {"name": "Pen Tablet", "code": "A5", "status": "Available", "itemId": "127"},
+    {"name": "Extension Wire", "code": "A6", "status": "Available", "itemId": "128"},
+    {"name": "Wifi modem", "code": "A7", "status": "Available", "itemId": "129"},
+    {"name": "Thunder Bolt", "code": "A8", "status": "Available", "itemId": "130"},
+    {"name": "Projector", "code": "A9", "status": "Available", "itemId": "131"},
+    {"name": "Puncher", "code": "A10", "status": "Available", "itemId": "132"},
+    {"name": "Clicker", "code": "A11", "status": "Available", "itemId": "133"},
+    {"name": "Adapter", "code": "A12", "status": "Available", "itemId": "134"},
+    {"name": "VGA to HDMI", "code": "A13", "status": "Available", "itemId": "135"},
+    {"name": "Mac VGA", "code": "A14", "status": "Available", "itemId": "136"}
+]

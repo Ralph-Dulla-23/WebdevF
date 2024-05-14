@@ -1,0 +1,68 @@
+.scan{
+    display: flex;
+     flex-direction: column;
+    margin: auto auto;
+}
+
+#logoscan {
+    margin: auto 2.5em;
+    font-size: 100px;
+    color: #e96d83;
+}
+.scan h4{
+    font-size: 50px;
+    align-items: center;
+}
+
+.inputID{
+    align-items: center;
+    text-align: center;
+    border: 1px solid #e96d83;
+    margin-top: 20px;
+    border-radius: 3px;
+    height: 40px;
+    font-size: 40px;
+}
+
+.tn{
+    margin: 10px auto;
+    padding: 5px 5px;
+    background-color: #e96d83;
+}
+
+.p-inputtext{}
+
+@media only screen and (max-width: 1024px) {
+.scan{
+    display: flex;
+        flex-direction: column;
+    margin: auto 200px;
+}
+
+.scan h4{
+    font-size: 30px;
+    align-items: center;
+}
+#logoscan {
+    margin: 0 auto;
+    font-size: 100px;
+    color: #e96d83;
+}
+.inputID{
+    align-items: center;
+    text-align: center;
+    border: 1px solid #e96d83;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.inputID{
+    padding: 10px;
+    border: 1px solid #e96d83;
+    margin-top: 20px;
+    border-radius: 3px;
+    height: 40px;
+    font-size: 20px;
+}
+
+}

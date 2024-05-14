@@ -1,0 +1,60 @@
+.uppercal{
+    display: flex;
+    width: 100%;
+   
+}
+
+.Itemid, .calendar{
+    border: #e96d83 2px solid;
+    border-radius: 5px;
+    height: 30%;
+    width: 41%;
+    padding: 10px;
+    text-align: center;
+} 
+
+
+.uppercal h3{
+    margin-right:  42%;
+    font-size: 30px;
+    left: 30px;
+}
+
+.p-calendar .p-datepicker-other-month{
+    background-color: #e96d83;
+}
+
+.Itemid, .calendar{
+    margin-right: 76px;
+}
+.p-datepicker-calendar td{
+    background-color: #e96d83;
+}
+
+.lowercal{
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 0 0;
+}
+
+.lowercal h3{
+    font-size: 30px;
+}
+
+.reason{
+    border: #e96d83 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+}
+
+.confirmc{
+    margin: 40px 0 0 34%;
+    width: 20%;
+    height: 20%;
+    font-size: 25px;
+    background-color: #e96d83;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}

@@ -1,0 +1,41 @@
+.master-detail-container {
+  
+}
+
+.master-section {
+    max-height: 300px; /* Set maximum height for the DataTable container */
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+}
+
+.citem {
+    background-color: #e57b8f;
+    font-size: 20px;
+    color: white;
+}
+
+.dtuitem th {
+    background-color: #ff859b;
+    color: rgb(255, 255, 255);
+}
+
+.inputadd {
+    border: #e57b8f solid 1px;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+}
+
+.btnadd {
+    padding: 5px;
+    margin: 0 5px 5px 0;
+    border: #ff859b 1px solid;
+    background-color: #ff859b;
+}
+
+
+@media only screen and (max-width: 1440px) {
+.detail-section{
+    max-height: 180px;
+    overflow-y: auto;
+}
+    }
+      

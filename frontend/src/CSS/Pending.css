@@ -1,0 +1,55 @@
+/* Styling for the table with the class name custom-table-2 */
+.custom-table-2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Style table header for custom-table-2 */
+  .custom-table-2 th {
+    background-color: #ff859b;
+    color: rgb(255, 255, 255);
+  }
+  
+  /* Style table data cells for custom-table-2 */
+  .custom-table-2 td {
+    background-color: #e57b8f;
+    font-size: 20px;
+    color: white;
+  }
+  
+  /* Style buttons for custom-table-2 */
+  .custom-table-2 button {
+    padding: 8px 16px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Style accept button for custom-table-2 */
+  .custom-table-2 button.btnaccept {
+    background-color: #35e58d;
+    color: rgb(255, 255, 255);
+  }
+  
+  /* Style decline button for custom-table-2 */
+  .custom-table-2 button.btndecline {
+    background-color: #d50000;
+    color: white;
+  }
+
+  .btnaccept{
+    background-color: #35e58d;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+  }
+
+  .btndecline{
+    background-color: #d50000;
+    padding: 5px;
+    cursor: pointer;
+  }
+ 

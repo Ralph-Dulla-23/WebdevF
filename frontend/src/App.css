@@ -1,0 +1,824 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+main{
+  padding-bottom: 70px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.WholeContent{
+  width: 1270px;
+  height: 100vh;
+  border-right: 1.5px solid #e96d83;
+  border-left: 1.5px solid #e96d83;
+  margin: 0 auto;
+  display: flex;
+  box-shadow: 0 0px 2rem 3rem rgba(132, 139, 200, 0.18) ;
+  background-color: white;
+}
+
+.mastertable{
+  max-height: 470px;
+  overflow-y: auto;
+}
+
+.aside{
+  width: 300px;
+  height: 100vh;
+  border-right: 1.5px solid #e96d83;
+  box-shadow: 1px 2rem 0rem rgba(132, 139, 200, 0.18) ;
+}
+
+
+.pfp {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  background-image: url('./Images/pfp1.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.username {
+  text-align: center; /* Center the text horizontally */
+  position: absolute;
+  top: 170px; /* Adjust the spacing between pfp and h1 */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  max-height: calc(100vh - 150px); /* Limit height to the remaining space in the .aside */
+  max-width: 240px;
+  overflow-y: auto; /* Add vertical scrollbar when content overflows */
+  white-space: pre;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem; /* Adjust the font size as needed */
+  margin: 0; /* Remove the default margin */
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+
+.sidebuttons{
+  margin-top: 130px;
+}
+
+
+.pfp #icon{
+  font-size: 40px;
+  margin-left: 55px;
+  margin-top: 55px;
+  opacity: 0;
+}
+
+.pfp #icon:hover{ 
+  opacity: 1;
+  transition: ease-in-out .3s;
+}
+
+
+a{
+  color: black;
+}
+
+h2{
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.aside .material-symbols-outlined{
+  font-size: 25px;
+}
+
+aside .sidebar{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  height: 88vh;
+  position: relative;
+  top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+aside .sidebar a{
+  display: flex;
+  align-items: center;
+  height: 4.7rem;
+  gap: 1rem;
+  position: relative;
+  margin-left: 4rem;
+  transition: all 0.3s ease;
+  border-left: #e96d83 1px solid;
+  border-top: #e96d83 1px solid;
+  border-bottom: #e96d83 1px solid;
+  margin: 3px 0 0 2rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+} 
+
+aside .sidebar a:last-child{
+  bottom: -2rem; 
+}
+
+aside .sidebar a.focus{
+  width: 100%;
+  margin-left: 0;
+  background-color: #e96d83;
+}
+
+aside .sidebar a.focus::before{
+  content: '';
+  width: 6px;
+  height: 18px;
+  background-color: #e96d83;
+  
+}
+
+aside .sidebar a.focus span{
+  background-color: #e96d83;
+  margin-left: calc(1rem - 3px);
+  transition: all 0.3s ease;;
+}
+
+aside .sidebar a:hover{
+  background-color: #e96d83;
+  transition: all 0.6s ease;
+}
+
+aside .sidebar a:hover span{
+  margin-left: 0.6rem;
+  transition: all 0.6s ease;
+}
+
+.content{
+ width: 100%;
+}
+
+.upper{
+
+}
+
+.upper h1{
+  font-size: 50px;
+  padding: 50px;
+  margin-top: -50px;
+}
+
+.logo{
+  justify-content: space-around;
+  margin-left: 780px;
+  margin-top: 30px;
+  height: 150px;
+  background: url('./Images/UIClogo.png') no-repeat;
+}
+
+.lower{
+  margin-top: -20px;
+  padding: 0 50px;  
+}
+
+.table{
+  width: 100%;
+  height: 39em;
+  background-color: #e96d83;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+
+.custom-datatable .p-datatable-thead th,
+.custom-datatable .p-datatable-tbody td {
+  font-size: 20px; 
+}
+
+/* Add this CSS to define a custom header style */
+.custom-header2 {
+  background: #ff859b;
+}
+
+
+.yes{
+  background-color: #ff859b;
+}
+
+/* Add this CSS to round the corners of the DataTable */
+.custom-datatable {
+  border-radius: 10px; /* Adjust the radius as needed */
+}
+
+.cfm{
+  background-color: rgb(255, 255, 255);
+  font-size: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  text-align: center;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 20%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the pop-up */
+  border: 1px solid #e96d83;
+  padding: 20px;
+  max-width: 700px;
+  height: 230px;
+  background-color: white;
+  z-index: 9; /* Ensure the pop-up is above other content */
+  border-radius: 20px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+}
+.btn-group{
+  display: flex;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+/* Set a style for the submit/login button */
+.btnconfirm {
+  margin: 20px 0;
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 20px;
+}
+
+/* Add a red background color to the cancel button */
+.btncancel{
+  margin: 20px 0;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 20px;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.itemid{
+  font-size: 20px;
+  background-color: #e96d83;
+  color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e96d83;
+  height: 70px;
+  width: 1270px; /* Use 100% width to extend across the entire viewport */
+  font-family: "Open Sans";
+  color: #fff;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%; /* Ensure the content takes up the full height of the footer */
+}
+
+.footer-content h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 2.5rem;
+  margin: 0; /* Remove default margin */
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 20px;
+  font-size: 12px;
+  margin: 0; /* Remove default margin */
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1366px) {
+.WholeContent{
+  width: 1270px;
+  height: 100vh;
+  border-right: 1.5px solid #e96d83;
+  border-left: 1.5px solid #e96d83;
+  margin: 0 auto;
+  display: flex;
+  box-shadow: 0 0px 2rem 3rem rgba(132, 139, 200, 0.18) ;
+  background-color: white;
+}
+
+.content{
+width: 100%;
+}
+
+.upper{
+
+}
+
+.upper h1{
+  font-size: 40px;
+  padding: 50px;
+  margin-top: -70px;
+}
+
+.aside{
+  width: 300px;
+  height: 100vh;
+  border-right: 1.5px solid #e96d83;
+  box-shadow: 1px 2rem 0rem rgba(132, 139, 200, 0.18) ;
+}
+
+
+.pfp {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  background-image: url(/src/Images/pfp1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.username {
+  text-align: center; /* Center the text horizontally */
+  position: absolute;
+  top: 100px; /* Adjust the spacing between pfp and h1 */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  max-height: calc(100vh - 150px); /* Limit height to the remaining space in the .aside */
+  max-width: 240px;
+  overflow-y: auto; /* Add vertical scrollbar when content overflows */
+  white-space: pre;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem; /* Adjust the font size as needed */
+  margin: 0; /* Remove the default margin */
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+
+.sidebuttons{
+  margin-top: 120px;
+}
+
+
+.pfp #icon{
+  font-size: 4  0px;
+  margin-left: 55px;
+  margin-top: 55px;
+  opacity: 0;
+}
+
+.pfp #icon:hover{ 
+  opacity: 1;
+  transition: ease-in-out .3s;
+}
+
+a{
+  color: black;
+}
+
+h2{
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.aside .material-symbols-outlined{
+  font-size: 25px;
+}
+
+aside .sidebar{
+  display: flex;
+  flex-direction: column;
+  border-radius: 1px;
+  height: 80vh;
+  position: relative;
+  top: 1rem;
+  transition: all 0.3s ease;
+}
+
+aside .sidebar a{
+  display: flex;
+  align-items: center;
+  height: 4.7rem;
+  gap: 1rem;
+  position: relative;
+  margin-left: 4rem;
+  transition: all 0.3s ease;
+  border-left: #e96d83 1px solid;
+  border-top: #e96d83 1px solid;
+  border-bottom: #e96d83 1px solid;
+  margin: 3px 0 0 4rem;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+} 
+
+aside .sidebar a:last-child{
+  bottom: -3rem; 
+}
+
+aside .sidebar a.focus{
+  width: 100%;
+  margin-left: 0;
+  background-color: #e96d83;
+}
+
+aside .sidebar a.focus::before{
+  content: '';
+  width: 6px;
+  height: 18px;
+  background-color: #e96d83;
+  
+}
+
+aside .sidebar a.focus span{
+  background-color: #e96d83;
+  margin-left: calc(1rem - 3px);
+  transition: all 0.3s ease;;
+}
+
+aside .sidebar a:hover{
+  background-color: #e96d83;
+  transition: all 0.6s ease;
+}
+
+aside .sidebar a:hover span{
+  margin-left: 0.6rem;
+  transition: all 0.6s ease;
+}
+
+
+.logo{
+  justify-content: space-around;
+  margin-left: 780px;
+  margin-top: 30px;
+  height: 150px;
+  background: url('./Images/UIClogo.png') no-repeat;
+}
+
+.lower{
+  margin-top: -20px;
+  padding: 0 50px;  
+}
+
+.table{
+  width: 100%;
+  height: 31em;
+  background-color: #e96d83;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e96d83;
+  height: 50px;
+  width: 1270px; /* Use 100% width to extend across the entire viewport */
+  font-family: "Open Sans";
+  color: #fff;
+  margin: 0 auto;
+}
+
+.mastertable{
+  max-height: 470px;
+  overflow-y: auto;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%; /* Ensure the content takes up the full height of the footer */
+}
+
+.footer-content h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1.5rem;
+  margin: 0; /* Remove default margin */
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 15px;
+  font-size: 10px;
+  margin: 0; /* Remove default margin */
+}
+
+.custom-datatable{
+  width: 870px;
+}
+
+
+
+}
+
+@media only screen and (max-width: 1024px) {
+.WholeContent{
+  width: 1024x;
+  height: 100vh;
+  border-right: 1.5px solid #e96d83;
+  border-left: 1.5px solid #e96d83;
+  margin: 0 auto;
+  display: flex;
+  box-shadow: 0 0px 2rem 3rem rgba(132, 139, 200, 0.18) ;
+  background-color: white;
+}
+
+.content{
+width: 1024px;
+}
+
+.upper{
+  position: relative;
+}
+
+.upper h1{
+  font-size: 20px;
+  padding: 50px;
+  margin-top: -70px;
+}
+
+.aside{
+  width: 250px;
+  height: 100vh;
+  border-right: 1.5px solid #e96d83;
+  box-shadow: 1px 2rem 0rem rgba(132, 139, 200, 0.18) ;
+}
+
+
+.pfp {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  background-image: url('./Images/pfp1.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.username {
+  text-align: center; /* Center the text horizontally */
+  position: absolute;
+  top: 170px; /* Adjust the spacing between pfp and h1 */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  max-height: calc(100vh - 150px); /* Limit height to the remaining space in the .aside */
+  max-width: 240px;
+  overflow-y: auto; /* Add vertical scrollbar when content overflows */
+  white-space: pre;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem; /* Adjust the font size as needed */
+  margin: 0; /* Remove the default margin */
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+
+.sidebuttons{
+  margin-top: 70px;
+}
+
+
+.pfp #icon{
+  font-size: 4  0px;
+  margin-left: 55px;
+  margin-top: 55px;
+  opacity: 0;
+}
+
+.pfp #icon:hover{ 
+  opacity: 1;
+  transition: ease-in-out .3s;
+}
+
+a{
+  color: black;
+}
+
+h2{
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.aside .material-symbols-outlined{
+  font-size: 20px;
+}
+
+aside .sidebar{
+  display: flex;
+  flex-direction: column;
+  border-radius: 1px;
+  height: 80vh;
+  position: relative;
+  top: 1rem;
+  transition: all 0.3s ease;
+}
+
+aside .sidebar a{
+  display: flex;
+  align-items: center;
+  height: 3.2rem;
+  gap: 1rem;
+  position: relative;
+  margin-left: 4rem;
+  transition: all 0.3s ease;
+  border-left: #e96d83 1px solid;
+  border-top: #e96d83 1px solid;
+  border-bottom: #e96d83 1px solid;
+  margin: 3px 0 0 4rem;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+} 
+
+aside .sidebar a:last-child{
+  bottom: -3rem; 
+}
+
+aside .sidebar a.focus{
+  width: 100%;
+  margin-left: 0;
+  background-color: #e96d83;
+}
+
+aside .sidebar a.focus::before{
+  content: '';
+  width: 6px;
+  height: 18px;
+  background-color: #e96d83;
+  
+}
+
+aside .sidebar a.focus span{
+  background-color: #e96d83;
+  margin-left: calc(1rem - 3px);
+  transition: all 0.3s ease;;
+}
+
+aside .sidebar a:hover{
+  background-color: #e96d83;
+  transition: all 0.6s ease;
+}
+
+aside .sidebar a:hover span{
+  margin-left: 0.6rem;
+  transition: all 0.6s ease;
+}
+
+
+.logo{
+  position: relative;
+  justify-content: space-around;
+  margin-left: 580px;
+  margin-top: 30px;
+  height: 150px;
+  background: url('./Images/UIClogo.png') no-repeat;
+}
+
+.lower{
+  margin-top: -20px;
+  padding: 0 50px;  
+}
+
+.table{
+  position: relative;
+  width: 74.3%;
+  height: 22.3em;
+  background-color: #e96d83;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.custom-datatable .p-datatable-thead th,
+.custom-datatable .p-datatable-tbody td {
+  font-size: 15px; 
+}
+
+.custom-datatable{
+  width: 100%;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e96d83;
+  height: 40px;
+  width: 1024px; /* Use 100% width to extend across the entire viewport */
+  font-family: "Open Sans";
+  color: #fff;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%; /* Ensure the content takes up the full height of the footer */
+}
+
+.footer-content h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1.5rem;
+  margin: 0; /* Remove default margin */
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 15px;
+  font-size: 10px;
+  margin: 0; /* Remove default margin */
+}
+
+.custom-datatable{
+  width: 674px;
+}
+
+.custom-datatable .p-column-header .p-column-title {
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+.p-column-header-content{
+  font-size: 14px;
+}
+.custom-datatable .p-datatable-thead th, .custom-datatable .p-datatable-tbody td{
+  font-size: 13px;
+  margin: 0px;
+}
+
+  
+}

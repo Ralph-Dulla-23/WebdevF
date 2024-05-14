@@ -1,0 +1,33 @@
+.return{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:20px;
+}
+
+.itemslist2{
+    font-size: 20px;
+    width: 60%;
+    height: 50px;
+    padding: 10px;
+    border: solid 1px rgb(255, 255, 255);
+    gap: 10px;
+    border-radius: 10px;
+    overflow-block: scroll;
+}
+
+
+.rbtn{
+    margin-top: 30px;
+    height: 100%;
+    width: 30%;
+    font-size: 50px;
+    background-color: #e96d83;
+    border-radius: 20px;
+    border: 2px solid aliceblue;
+}
+
+.p-error{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}

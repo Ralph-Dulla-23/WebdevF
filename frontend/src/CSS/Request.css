@@ -1,0 +1,20 @@
+.rbtn1{
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 90px;
+    width: 50%;
+    font-size: 40px;
+    background-color: #e96d83;
+    border-radius: 20px;
+    border: 2px solid aliceblue;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Requestbuttons{
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+}
+
